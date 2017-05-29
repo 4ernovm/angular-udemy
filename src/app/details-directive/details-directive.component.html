@@ -1,0 +1,18 @@
+<button class="btn btn-default" (click)="toggleVisible()">Display Details</button>
+
+<p *ngIf="isVisible">
+  Cras varius. Maecenas nec odio et ante tincidunt tempus. Cras ultricies mi eu turpis hendrerit fringilla. Praesent vestibulum dapibus nibh.
+
+  In consectetuer turpis ut velit. Phasellus dolor. Ut tincidunt tincidunt erat. Vivamus elementum semper nisi.
+
+  Vivamus in erat ut urna cursus vestibulum. Ut a nisl id ante tempus hendrerit. Nullam sagittis. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim.
+</p>
+
+<ul>
+  <li *ngFor="let log of logs; let i = index" >
+    <p
+      [ngStyle]="{ backgroundColor: formatAdditionalLogs(i) }"
+      [ngClass]="{ 'white-text': formatAdditionalLogs(i) }"
+    >{{ log.toLocaleString() }}</p>
+  </li>
+</ul>
